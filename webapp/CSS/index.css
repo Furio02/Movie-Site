@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #fbc304;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 20px;
+    background-color: #fbdb5a;
+    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.25);  
+}
+
+.card, .card-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+}
+
+.line{
+    width: 260px;
+    height: 1px;
+    background: linear-gradient(to right, transparent 0%, #747474 10%, #747474 90%, transparent 100%);
+    margin: 2rem 0 2rem 0;    
+    rotate: 90deg;   
+    position: absolute;
+}
+
+h1{
+    margin-bottom: 2rem;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input{
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#btn{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+#btn:hover{
+    background-color: rgb(58, 58, 58);
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+#banana-logo{
+    width: 400px;
+    margin-bottom: 5rem;
+    cursor: pointer;
+}
+
+.swiper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+}
+
+.button{
+    background-color: #b9b9b9;
+    width: 50px;
+    height: 25px;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+}
+.button::before{
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    border-radius: 200px;
+    margin: 5px;
+    transition: 0.2s;
+}
+input[type="checkbox"]:checked + .button{
+    background-color: #a47404;
+}
+input[type="checkbox"]:checked + .button::before{
+    transform: translateX(150%);
+}
+input[type="checkbox"]{
+    display: none;
+}
+
+/* .line{
+    width: 260px;
+    height: 1px;
+    background: linear-gradient(to right, transparent 0%, #747474 10%, #747474 90%, transparent 100%);
+    margin: 2rem 0 2rem 0;
+    rotate: 90deg;
+    position: absolute;
+} */
+
+.background-container-left {
+    max-height: 1080px;
+    width: 480px;
+    overflow: hidden;
+    position: absolute;
+  }
+  
+  .sliding-background-left{
+    --imageHeight: 960px;
+    background: url("../REF/dada.png") repeat-y;
+    height: calc(var(--imageHeight) * 3);
+    animation: slide-top 8s linear infinite;
+  }
+
+  .background-container-right{
+    max-height: 1080px;
+    width: 480px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+  }
+  
+  .sliding-background-right{
+    --imageHeight: 960px;
+    background: url("../REF/dada2.png") repeat-y;
+    height: calc(var(--imageHeight) * 3);
+    animation: slide-down 8s linear infinite;
+  }
+
+  @keyframes slide-top {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(calc(var(--imageHeight) * -1));
+    }
+  }
+  
+  @keyframes slide-down {
+    from{
+        transform: translateY(calc(var(--imageHeight) * -1));
+    }
+    to{
+        transform: translateY(0px);
+    }
+  }
